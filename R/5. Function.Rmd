@@ -1,0 +1,76 @@
+---
+title: "5. Function"
+author: "Juhong Park"
+---
+
+# Args
+```{r}
+args(lm)
+```
+
+# Order of Operation
+```{r}
+x <- 1:4
+y <- x + 4
+
+# Name matching -> Partial Matching -> Position matching
+# formula: position matching, model: name matching, subse: partial matching
+lm(model=FALSE, y~x, subse=1:100)
+
+# Recommended Order
+# Position matching -> Name matching, not Partial Matching
+lm(y~x, model=FALSE, subset=1:100)
+```
+
+# Function
+```{r}
+# num2 has default value 1
+func <- function(num, num2=1) {
+  num + num2
+}
+func(3)
+
+# ...: argument that is usually passed on to other function
+func2 <- function(num, num2=1, ..., afterDot=1) {
+  mean(num + num2 + afterDot, ...)
+}
+func2(1, na.rm=FALSE, afterDot=2)
+func2(1, na.rm=FALSE, afterDt=2)  # Not Partial Matching for Argument after ...
+```
+
+# Search
+```{r}
+# Order of Binding Value
+search()
+library(ggplot2)
+search()
+detach("package:ggplot2")
+search()
+```
+
+# Lexical Scoping, Closure
+```{r}
+# Lexical Scoping: the values of free variables are searched for in the environment in which the function was defined
+# y is free variable
+function(x) {
+  x + y
+}
+ 
+# Closure: Function + Environment
+# Environment: Collection of (Symbol, Value) Pairs
+plus.n <- function(n) {
+  function (x) {
+    x + n
+  }
+}
+plus.three <- plus.n(3)
+plus.four <- plus.n(4)
+
+plus.three(1)
+plus.four(1)
+
+# Check Environment
+ls(environment(plus.three))
+get("n", environment(plus.three))
+```
+
