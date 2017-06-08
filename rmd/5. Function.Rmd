@@ -42,10 +42,13 @@ func2(1, na.rm=FALSE, afterDt=2)  # Not Partial Matching for Argument after ...
 ```{r}
 # Order of Binding Value
 search()
+searchpaths()
 library(ggplot2)
 search()
+searchpaths()
 detach("package:ggplot2")
 search()
+searchpaths()
 ```
 
 # Lexical Scoping, Closure
