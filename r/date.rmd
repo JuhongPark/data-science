@@ -1,0 +1,48 @@
+---
+title: "Date"
+author: "Juhong Park"
+---
+
+# Date
+```{r}
+# Date Since 1970-01-01
+x <- as.Date("1970-01-01")
+x
+unclass(x)
+x <- as.Date("1970-01-02")
+x
+unclass(x)
+```
+
+# Time
+```{r}
+# Time Since 1970-01-01
+# POSIXct: Integer Format
+ct <- as.POSIXct("1970-01-01", tz="GMT")
+ct
+unclass(ct)
+ct <- as.POSIXct("1970-01-02", tz="GMT")
+ct
+unclass(ct)
+
+# POSIXlt: Data Frame Format
+lt <- as.POSIXlt(ct)
+lt
+names(unclass(lt))
+lt$year
+```
+
+# Date From Character
+```{r}
+dateString <- c("2017-06-03 12:30:00 +0900")
+dateInfo <- strptime(dateString, "%Y-%m-%d %H:%M:%S %z")
+dateInfo
+class(dateInfo)
+```
+
+# Date Operation
+```{r}
+date1 <- as.Date("1970-01-01")
+date2 <- as.Date("2017-06-03")
+date2 - date1
+```

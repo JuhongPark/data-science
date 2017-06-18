@@ -1,0 +1,53 @@
+---
+title: "Data IO"
+author: "Juhong Park"
+---
+
+# Read CSV
+```{r}
+csvData <- read.csv("../data/iris.csv")
+head(csvData)
+```
+
+# Write CSV
+```{r}
+write.csv(csvData, "../data/iris_write.csv")
+csvWriteData = read.csv("../data/iris_write.csv")
+head(csvWriteData)
+```
+
+# Read Large Data
+```{r}
+initData = read.csv("../data/iris.csv", nrow=100)
+classInfo = sapply(initData, class)
+classInfo
+allData = read.csv("../data/iris.csv", colClasses=classInfo)
+```
+
+# Textual Format
+```{r error=TRUE}
+dput(csvData, "../data/iris.r")
+dgetData = dget("../data/iris.r")
+head(dgetData)
+dump("csv_data", file="../data/iris_dump.r")
+rm(csvData)
+head(csvData)  # Error
+source("../data/iris_dump.r")
+head(csvData)
+```
+
+# Read Data by Connection
+```{r}
+con <- file("../data/iris.csv", "r")
+csvData <- read.csv(con)
+close(con)
+head(csvData)
+con <- file("../data/iris.csv", "r")
+csvData <- readLines(con)
+close(con)
+head(csvData)
+con <- url("http://www.kaist.ac.kr", "r")
+urlData <- readLines(con, 6)
+close(con)
+head(urlData)
+```

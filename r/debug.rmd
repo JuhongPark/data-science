@@ -1,0 +1,30 @@
+---
+title: "Debug"
+author: "Juhong Park"
+---
+
+# Trace, Traceback()
+```{r}
+library(datasets)
+lm(y ~ iris)
+
+trace(lm)
+lm(y ~ iris)
+untrace(lm)
+
+lm(y ~ iris)
+traceback()
+```
+
+# Debug
+```{r}
+debug(lm)
+lm(y ~ iris)  # Debug mode in function, enter browse
+undebug(lm)
+
+debugonce(lm)  # Debug mode once
+lm(y ~ iris)  # Debug mode in function
+read.csv("nothing")
+options(error = recover)  # Type in browse
+read.csv("nothing")  # Type in browse
+```
