@@ -1,5 +1,5 @@
 ---
-title: "8. Debug"
+title: "Debug"
 author: "Juhong Park"
 ---
 

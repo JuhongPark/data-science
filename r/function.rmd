@@ -1,5 +1,5 @@
 ---
-title: "5. Function"
+title: "Function"
 author: "Juhong Park"
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "1. Basic"
-author: Juhong Park
+title: "Basic"
+author: "Juhong Park"
 ---
 
 # Variable Assignment

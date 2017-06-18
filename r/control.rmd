@@ -1,5 +1,5 @@
 ---
-title: "4. Control"
+title: "Control"
 author: "Juhong Park"
 ---
 

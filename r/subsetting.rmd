@@ -1,6 +1,6 @@
 ---
-title: "3. Subsetting"
-author: Juhong Park
+title: "Subsetting"
+author: "Juhong Park"
 ---
 
 # Vector Subsetting

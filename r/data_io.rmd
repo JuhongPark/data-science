@@ -1,6 +1,6 @@
 ---
-title: "2. Data IO"
-author: Juhong Park
+title: "Data IO"
+author: "Juhong Park"
 ---
 
 # Read CSV
@@ -11,8 +11,8 @@ head(csvData)
 
 # Write CSV
 ```{r}
-write.csv(csvData, "../data/irisWrite.csv")
-csvWriteData = read.csv("../data/irisWrite.csv")
+write.csv(csvData, "../data/iris_write.csv")
+csvWriteData = read.csv("../data/iris_write.csv")
 head(csvWriteData)
 ```
 
@@ -26,13 +26,13 @@ allData = read.csv("../data/iris.csv", colClasses=classInfo)
 
 # Textual Format
 ```{r error=TRUE}
-dput(csvData, "../data/iris.R")
-dgetData = dget("../data/iris.R")
+dput(csvData, "../data/iris.r")
+dgetData = dget("../data/iris.r")
 head(dgetData)
-dump("csvData", file="../data/irisDump.R")
+dump("csv_data", file="../data/iris_dump.r")
 rm(csvData)
 head(csvData)  # Error
-source("../data/irisDump.R")
+source("../data/iris_dump.r")
 head(csvData)
 ```
 
