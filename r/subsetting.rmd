@@ -18,7 +18,9 @@ x[logicalX]
 # List Subsetting
 ```{r}
 x <- list(seq=1:4, pi=3.14, author="Juhong Park")
-x[1]
+x
+x[1]  # One based indexing
+x[-1]  # Remove by index
 x[[1]]
 x$seq
 x["seq"]
