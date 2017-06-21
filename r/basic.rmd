@@ -43,10 +43,22 @@ x <- c(1:4)
 x
 x <- c(1, 2, 3, 4)
 x
-x <- c("One", "Two", "Three", "Four")
-x
 x <- vector("numeric", length=4)
 x
+x <- 1.2:4
+x
+x <- seq(1.2, 4, by=0.5)
+x
+x <- seq(1.2, 4, length=10)
+x
+x <- rep(1, 4)
+x
+x <- rep(c(1, 4), each=10)
+x
+char_vector <- c("One", "Two", "Three", "Four")
+char_vector
+paste(char_vector, collapse=" ")
+paste(char_vector, char_vector, sep="-", collapse=" ")
 ```
 
 ### Vector Operation
