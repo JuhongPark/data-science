@@ -155,6 +155,12 @@ x / y
 x %*% y
 ```
 
+# Array
+```{r}
+x <- array(1:24, dim=c(3, 2, 4))
+x
+```
+
 # Factor
 ```{r}
 x <- factor(c("Up", "Down", "Down", "Up", "Down"))
