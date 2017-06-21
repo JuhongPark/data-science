@@ -173,8 +173,9 @@ x
 
 # Missing Value
 ```{r}
-x <- c(0/0, NaN, NA)
+x <- c(1/0, Inf, 0/0, NaN, NA)
 x
+is.infinite(x) # Inf: Infinite
 is.nan(x)  # NaN: Not a Number
 is.na(x)  # NA: Not Availalbe
 ```
