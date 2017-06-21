@@ -178,6 +178,9 @@ x
 is.infinite(x) # Inf: Infinite
 is.nan(x)  # NaN: Not a Number
 is.na(x)  # NA: Not Availalbe
+x <- c(1, -1, NA)
+x > 0
+x[x > 0]
 ```
 
 # Data Frame
