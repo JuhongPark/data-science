@@ -121,10 +121,11 @@ x <- matrix(1:12, nrow=3, ncol=4)
 x
 dim(x)
 attributes(x)
-x <- 1:12
-x
-dim(x) <- c(3, 4)
-x
+x2 <- 1:12
+x2
+dim(x2) <- c(3, 4)
+x2
+identical(x, x2)
 ```
 
 ### Matrix by Bind
