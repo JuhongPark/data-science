@@ -190,6 +190,11 @@ x <- data.frame(num=1:3, word=c("Four", "Five", "Six"))
 x
 nrow(x)
 ncol(x)
+dim(x)
+head(x)
+str(x)
+summary(x)
+object.size(x)
 ```
 
 # Names
