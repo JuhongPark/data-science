@@ -1,0 +1,26 @@
+---
+title: "Profiling"
+author: "Juhong Park"
+---
+
+# System Time
+```{r}
+# user: CPU
+# system: OS
+# elapsed: Real
+system.time(readLines("../data/iris.csv"))
+```
+
+# Rprof
+```{r}
+# by.self: Only the function
+# by.total: Total run time
+rprof_path <- "../tmp/rprof.out"
+Rprof(rprof_path)
+readLines("../data/iris.csv")
+Rprof(NULL)
+summary_rprof <-summaryRprof(rprof_path)
+str(summary_rprof)
+summary_rprof$by.self
+summary_rprof$by.total
+```
