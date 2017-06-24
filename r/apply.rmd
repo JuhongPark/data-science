@@ -36,6 +36,9 @@ vapply(iris$Sepal.Length, class, character(1))
 # tapply
 tapply(iris$Sepal.Length, iris$Species, sum)
 
+# with
+with(iris, tapply(Sepal.Length, Species, sum))
+
 # split
 iris_split <- split(iris, iris$Species)
 lapply(iris_split, function(x) sum(x["Sepal.Length"]))
