@@ -28,9 +28,12 @@ apply(x_array, c(1, 2), mean)
 # mapply
 mapply(runif, x_vector, min=0, max=10)
 
-# tapply
+# vapply
 library(datasets)
-iris$Species
+vapply(iris$Sepal.Length, class, numeric(1))  # Error
+vapply(iris$Sepal.Length, class, character(1))
+
+# tapply
 tapply(iris$Sepal.Length, iris$Species, sum)
 
 # split
