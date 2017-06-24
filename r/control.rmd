@@ -59,3 +59,18 @@ for(i in 1:10) {
   print(i)
 }
 ```
+
+# And, Or
+```{r}
+# And
+TRUE & TRUE
+TRUE & c(TRUE, FALSE)
+TRUE && TRUE
+TRUE && c(TRUE, FALSE)
+
+# Or
+TRUE | TRUE
+TRUE | c(TRUE, FALSE)
+TRUE || TRUE
+TRUE || c(TRUE, FALSE)
+```
