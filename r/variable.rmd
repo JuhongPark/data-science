@@ -1,5 +1,5 @@
 ---
-title: "Basic"
+title: "Variable"
 author: "Juhong Park"
 ---
 
