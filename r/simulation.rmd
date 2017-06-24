@@ -1,0 +1,41 @@
+---
+title: "Simulation"
+author: "Juhong Park"
+---
+
+# Distribution
+```{r}
+# Normal
+mean_val <- 0
+sd_val <- 1
+dnorm(0, mean_val, sd_val)  # Probability density
+pnorm(0, mean_val, sd_val)  # Cumlative distribution
+qnorm(0.5, mean_val, sd_val)  # Quantile function
+rnorm(2, mean_val, sd_val)  # Random number generation
+
+# Poisson
+lambda_val = 2
+rpois(2, lambda_val)
+
+# Binomial
+size_val = 10
+prob_val = 0.3
+rbinom(10, size_val, prob_val)
+```
+
+# Seed
+```{r}
+# Set seed
+rnorm(2)
+set.seed(0)
+rnorm(2)
+set.seed(0)
+rnorm(2)
+```
+
+# Sample
+```{r}
+x <- 1:10
+sample(x, 4)
+sample(x, 4, replace=TRUE)
+```
