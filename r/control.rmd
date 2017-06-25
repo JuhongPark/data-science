@@ -47,7 +47,7 @@ while(x < 5) {
 }
 ```
 
-# Break, Next
+# Break, Next, Stop
 ```{r}
 for(i in 1:10) {
   if(i == 2) {
@@ -55,6 +55,13 @@ for(i in 1:10) {
   }
   if(i == 5) {
     break
+  }
+  print(i)
+}
+
+for(i in 1:10) {
+  if(i == 5) {
+    stop("Stop")
   }
   print(i)
 }
