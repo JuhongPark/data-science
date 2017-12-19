@@ -1,0 +1,25 @@
+---
+title: "P-value Distribution"
+author: "Juhong Park"
+---
+
+# P-value Distribution
+```{r}
+draw_p_value_dist <- function(size) {
+  result_vector = c()
+  for(i in 1:1000) {
+    prob <- c(1/2, 1/2)
+    data <- rbinom(1, size, prob[1])
+    data2 <- rbinom(1, size, prob[2])
+    result <- prop.test(c(data, data2), c(size, size), alternative = c("less"))
+    result_vector <- c(result_vector, result$p.value)
+  }
+  hist(result_vector, breaks=100, freq = FALSE, main=paste("P-value Distribution, size:", toString(size)), xlab="")
+  par(new = TRUE)
+  plot(density(result_vector), col="blue", axes = FALSE,  main="", sub="", xlab="")
+  axis(4, col="blue", col.axis="blue")
+}
+draw_p_value_dist(1000)
+draw_p_value_dist(1000000000)
+```
+
