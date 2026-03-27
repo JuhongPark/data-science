@@ -55,8 +55,8 @@ for i in tqdm(range(0, len(ticker_list))):
         mycursor.executemany(query, args)
         con.commit()
 
-    except:
-        print(ticker)
+    except Exception as e:
+        print(f'{ticker}: {e}')
         error_list.append(ticker)
 
     time.sleep(2)

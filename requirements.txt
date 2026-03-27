@@ -1,0 +1,36 @@
+# Core data science
+jupyter
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+scikit-learn
+
+# Deep learning
+tensorflow
+torch
+
+# Web scraping
+requests
+beautifulsoup4
+lxml
+selenium
+webdriver-manager
+
+# Finance
+yfinance
+yahooquery
+tiingo
+bt
+pymysql
+sqlalchemy
+
+# Utilities
+tqdm
+keyring
+xmltodict
+python-dateutil
+folium
+graphviz
+six

@@ -35,7 +35,7 @@ for i in tqdm(range(0, len(ticker_list))):
         data = Ticker(ticker)
         
         data_y = data.all_financial_data(frequency = 'a')
-        if type(data_y) == str:
+        if isinstance(data_y, str):
             data = Ticker(f'{ticker[:-1]}-{ticker[-1]}')
             data_y = data.all_financial_data(frequency = 'a')
         data_y.reset_index(inplace = True)
@@ -59,8 +59,8 @@ for i in tqdm(range(0, len(ticker_list))):
         mycursor.executemany(query_fs, args)
         con.commit()
 
-    except:
-        print(ticker)
+    except Exception as e:
+        print(f'{ticker}: {e}')
         error_list.append(ticker)
 
     time.sleep(2)
