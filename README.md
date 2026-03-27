@@ -19,6 +19,15 @@ The most complete piece is the [financial data pipeline](finance/quant/) — cra
 - **R** — [11 tutorial topics](r/)
 - **SQL** — [SQLite exercises](sql/)
 
+## Takeaways
+
+| Observation | Context |
+|-------------|---------|
+| **Accuracy alone hides error costs** | Breast cancer classification required 13 separate metrics (sensitivity, specificity, FPR, FNR, F1, ...) because missing cancer (false negative) is far more dangerous than an unnecessary biopsy (false positive) |
+| **Interpretability–accuracy tradeoff** | Logistic regression (93.7%) → SVM → MLP (95.8%) on the same clinical dataset — accuracy improved, but the model became harder to explain to a non-technical audience |
+| **Regularization exposes overfitting** | SVM with C swept from 0.0001 to 10,000 (×1,000 iterations each) — training accuracy kept rising while test accuracy plateaued, showing where the model stops learning and starts memorizing |
+| **Metric choice changes the conclusion** | Same backtest data ranked strategies differently depending on the metric — total return favored equity concentration, Sharpe ratio favored diversification |
+
 ## Tech
 
 Python, R, SQL · scikit-learn, TensorFlow, PyTorch · pandas, NumPy, matplotlib · Selenium, BeautifulSoup · yfinance, MySQL
