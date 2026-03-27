@@ -1,56 +1,30 @@
 # data-science
 
-Data science projects and studies (2017-2024) — ML, statistics, financial data engineering, and programming across Python, R, and SQL.
+Data science projects and studies (2017-2024) in ML, statistics, and financial data engineering.
 
-> I built this repo to turn everything I learn into runnable code.
-> Each directory is a different stage of learning, from logic gates to production-style data pipelines.
-
----
-
-## Highlights
-
-| Project | What I did | Stack |
-|---------|-----------|-------|
-| **[Financial Data Pipeline](finance/quant/)** | Crawled stock prices & financial statements (KR/global), stored in MySQL, ran backtests | Python, Selenium, yfinance, Tiingo API, MySQL |
-| **[Medical AI Course](study/med-ai-expert/)** | 5 ML tasks on clinical datasets — regression, SVM, model evaluation | scikit-learn, pandas |
-| **[Hands-On ML](study/handson-ml/)** | End-to-end housing price prediction from the O'Reilly book | scikit-learn, NumPy |
-| **[Deep Learning](study/pytorch/, study/tensorflow/)** | PyTorch tutorials, TensorFlow CNN / perceptron / k-means | PyTorch, TensorFlow |
-| **[Math & Statistics](study/math-stat/)** | Probability theory — the math behind the ML models above | Jupyter |
-| **[Titanic Classification](python/titanic_first_class.ipynb)** | Decision tree on Kaggle dataset with graphviz visualization | scikit-learn, seaborn |
-| **[IPA Crawler](python/IPA_crawler.ipynb)** | Web scraper for pronunciation symbols from online dictionary | Selenium, BeautifulSoup |
-| **[R Tutorials](r/)** | 11 topics: apply, subsetting, control flow, profiling, simulation, etc. | R |
-| **[SQL Practice](sql/)** | Query exercises with SQLite | SQL, pandas |
+**Recommended:** [`finance/quant/`](finance/quant/) — end-to-end data pipeline with backtesting.
 
 ---
 
-## Tech stack
+## Projects
 
-| Category | Tools |
-|----------|-------|
-| Languages | Python, R, SQL |
-| ML / DL | scikit-learn, TensorFlow, PyTorch |
-| Data | pandas, NumPy, SciPy, matplotlib, seaborn |
-| Scraping | Selenium, BeautifulSoup, requests |
-| Finance | yfinance, yahooquery, Tiingo API, bt |
-| Storage | MySQL, SQLite |
+| Project | Description | Stack |
+|---------|------------|-------|
+| **[Financial Data Pipeline](finance/quant/)** | Crawlers for stock prices & financial statements (KR/global), MySQL storage, portfolio backtesting | yfinance, Selenium, BeautifulSoup, MySQL |
+| **[Medical AI Tasks](study/med-ai-expert/)** | 5 ML tasks on clinical datasets — regression, SVM, model evaluation | scikit-learn, pandas |
+| **[IPA Crawler](python/IPA_crawler.ipynb)** | Selenium scraper collecting pronunciation symbols from online dictionary | Selenium, BeautifulSoup |
+
+## Studies
+
+- **ML & DL** — Hands-On ML book ([`study/handson-ml/`](study/handson-ml/)), PyTorch ([`study/pytorch/`](study/pytorch/)), TensorFlow ([`study/tensorflow/`](study/tensorflow/))
+- **Math** — Probability and mathematical statistics ([`study/math-stat/`](study/math-stat/))
+- **Python** — Titanic classification ([`python/`](python/))
+- **R** — 11 tutorial topics ([`r/`](r/))
+- **SQL** — Query exercises with SQLite ([`sql/`](sql/))
 
 ---
 
-## Repository structure
-
-```
-finance/quant/          stock crawlers (KR/global), backtesting, Tiingo API
-study/
-  handson-ml/           Hands-On ML book — housing price prediction
-  pytorch/              PyTorch official tutorials
-  tensorflow/           CNN, perceptron, k-means, linear regression
-  math-stat/            probability and mathematical statistics
-  med-ai-expert/        medical AI course — 5 ML task notebooks
-python/                 Titanic, IPA crawler, logic gates
-r/                      R tutorials (11 topics)
-sql/                    SQL practice with SQLite
-data/                   shared datasets (iris.csv, sql.db)
-```
+**Languages:** Python, R, SQL | **ML/DL:** scikit-learn, TensorFlow, PyTorch | **Data:** pandas, NumPy, matplotlib
 
 ## Setup
 
