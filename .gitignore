@@ -111,7 +111,7 @@ ENV/
 *-Ex.R
 
 # Output files from R CMD build
-/*.tar.gz
+/*_build.tar.gz
 
 # Output files from R CMD check
 /*.Rcheck/
@@ -136,6 +136,25 @@ vignettes/*.pdf
 
 # Mac DS_Store
 .DS_Store
+
+# OS files
+Thumbs.db
+Desktop.ini
+*~
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Compressed archives
+*.tgz
+*.tar.gz
+
+# Credentials / API keys
+*.key
+credentials.json
 
 # Temp Directory
 /tmp
