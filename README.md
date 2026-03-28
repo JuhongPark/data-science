@@ -1,17 +1,9 @@
 # data-science
 
-Data science projects and studies (2017-2024) in ML, statistics, and financial data engineering.
+Early-career studies in ML, statistics, and financial data engineering.
 The most complete piece is the [financial data pipeline](finance/quant/) — crawlers, storage, and backtesting in one workflow.
 
-## Projects
-
-| Project | Description | Stack |
-|---------|------------|-------|
-| [**Financial Data Pipeline**](finance/quant/) | Stock price & financial statement crawlers (KR/global), MySQL storage, portfolio strategy backtesting | yfinance, Selenium, MySQL |
-| [**Medical AI Tasks**](study/med-ai-expert/) | 4 classification + 1 regression task on a clinical dataset (breast cancer) — LR, SVM, Random Forest, MLP with 13-metric evaluation | scikit-learn, pandas |
-| [**IPA Crawler**](python/IPA_crawler.ipynb) | Web scraper for pronunciation symbols from online dictionary | Selenium, BeautifulSoup |
-
-## Studies
+## Contents
 
 - **ML & DL** — [Hands-On ML](study/handson-ml/) (housing prediction), [PyTorch](study/pytorch/), [TensorFlow](study/tensorflow/) (CNN, k-means)
 - **Math** — [Probability and statistics](study/math-stat/)
