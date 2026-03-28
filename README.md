@@ -1,6 +1,6 @@
 # data-science
 
-Early-career studies in ML and statistics.
+Early-career studies in ML, DL, and statistics.
 
 ## Contents
 
