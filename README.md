@@ -21,24 +21,14 @@ The most complete piece is the [financial data pipeline](finance/quant/) — cra
 
 ## Takeaways
 
-### Key findings
+Different data, different models, different metrics — different conclusions. These projects are a reminder to evaluate from multiple angles before trusting any single result.
 
-> **Models disagree — and a single metric cannot tell you which one to trust.**
-
-| Finding | Evidence |
-|---------|----------|
-| **Same data, different answers** | Breast cancer: LR 93.7% → SVM 97.2% → RF 97.2% → MLP 95.8% — four models, no consensus, and the deepest (MLP) was *not* the best |
-| **Same accuracy, different errors** | RF and MLP share 96.7% sensitivity, yet RF's FPR (1.9%) is one-third of MLP's (5.7%) — which model is "better" depends on which error matters |
-| **Single metrics hide asymmetric risk** | 13 metrics (sensitivity, specificity, FPR, FNR, F1, ...) were needed to reveal that missing cancer (FNR 3.3%) is far costlier than an unnecessary biopsy |
-| **Metric choice flips the ranking** | Backtest: total return favored ALL SPY, Sharpe (~0.80) and Calmar favored All Weather — the "best" strategy changed with the metric |
-
-### Supporting observations
-
-| Topic | Detail |
-|-------|--------|
-| Overfitting | SVM C swept 0.0001–10,000 (×1,000 iter) — training hit 100% at C ≥ 100, test plateaued at ~96.5% |
-| Feature importance | RF top-3 (worst perimeter, mean concave points, worst concave points) match known cytological markers |
-| Interpretability | LR/RF expose weights and importances; MLP does not — limits clinical and regulatory accountability |
+| Observation | Evidence |
+|-------------|----------|
+| **Model choice changes the answer** | Breast cancer: LR 93.7% → SVM 97.2% → RF 97.2% → MLP 95.8% — four models, no consensus |
+| **Metric choice changes the answer** | RF and MLP share 96.7% sensitivity, yet RF's FPR (1.9%) is one-third of MLP's (5.7%); backtest total return favored ALL SPY, Sharpe (~0.80) favored All Weather |
+| **A single number is never enough** | 13 metrics (sensitivity, specificity, FPR, FNR, F1, ...) were needed to reveal that missing cancer (FNR 3.3%) costs far more than an unnecessary biopsy |
+| **Overfitting hides in plain sight** | SVM C swept 0.0001–10,000 (×1,000 iter) — training hit 100% at C ≥ 100, test plateaued at ~96.5% |
 
 ## Tech
 
