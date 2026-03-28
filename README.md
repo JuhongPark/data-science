@@ -1,6 +1,6 @@
 # data-science
 
-Early-career studies in ML, statistics, and financial data engineering.
+Early-career studies in ML and statistics.
 The most complete piece is the [financial data pipeline](finance/quant/) — crawlers, storage, and backtesting in one workflow.
 
 ## Contents
