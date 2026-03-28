@@ -21,24 +21,24 @@ The most complete piece is the [financial data pipeline](finance/quant/) — cra
 
 ## Takeaways
 
-### ML perspective — models disagree, metrics reveal why
+### Key findings
 
-| Observation | Context |
-|-------------|---------|
-| **Same data, different answers** | Breast cancer dataset: LR 93.7% → SVM 97.2% → RF 97.2% → MLP 95.8% — four models, no consensus on ranking, and the deepest model (MLP) was *not* the best |
-| **Same accuracy, different errors** | RF and MLP share 96.7% sensitivity, yet RF's false-positive rate (1.9%) is one-third of MLP's (5.7%) — which model is "better" depends entirely on which error you care about |
-| **Single metrics hide asymmetric risk** | Breast cancer classification required 13 metrics (sensitivity, specificity, FPR, FNR, F1, ...) — accuracy alone cannot express that missing cancer (FNR 3.3%) is far costlier than an unnecessary biopsy |
-| **Metric choice flips the ranking** | Same backtest data: total return favored equity concentration (ALL SPY), Sharpe (~0.80) and Calmar favored the diversified All Weather portfolio — the "best" strategy changed with the metric |
-| **Regularization separates learning from memorizing** | SVM C swept 0.0001–10,000 (×1,000 iterations) — training hit 100% at C ≥ 100 while test plateaued at ~96.5%; only the train-test gap metric exposed the problem |
-| **Feature importance as a sanity check** | RF top-3 features — worst perimeter, mean concave points, worst concave points — match known cytological markers; a metric that accuracy alone cannot provide |
+> **Models disagree — and a single metric cannot tell you which one to trust.**
 
-### AI safety perspective
+| Finding | Evidence |
+|---------|----------|
+| **Same data, different answers** | Breast cancer: LR 93.7% → SVM 97.2% → RF 97.2% → MLP 95.8% — four models, no consensus, and the deepest (MLP) was *not* the best |
+| **Same accuracy, different errors** | RF and MLP share 96.7% sensitivity, yet RF's FPR (1.9%) is one-third of MLP's (5.7%) — which model is "better" depends on which error matters |
+| **Single metrics hide asymmetric risk** | 13 metrics (sensitivity, specificity, FPR, FNR, F1, ...) were needed to reveal that missing cancer (FNR 3.3%) is far costlier than an unnecessary biopsy |
+| **Metric choice flips the ranking** | Backtest: total return favored ALL SPY, Sharpe (~0.80) and Calmar favored All Weather — the "best" strategy changed with the metric |
 
-| Observation | Context |
-|-------------|---------|
-| **Model choice is a patient-safety decision** | RF and MLP both "pass" at >95% accuracy, but choosing MLP triples unnecessary biopsies (FPR 5.7% vs 1.9%) — model selection requires multi-metric evaluation, not a single leaderboard score |
-| **Overfitting is invisible without the right metric** | SVM scores 100% on training data yet ~96.5% on unseen data — accuracy on training set looks perfect, only the held-out gap reveals the risk |
-| **Interpretability enables accountability** | LR and RF expose feature weights and importances; MLP does not — regulators and clinicians need metrics beyond accuracy to trust and audit a model |
+### Supporting observations
+
+| Topic | Detail |
+|-------|--------|
+| Overfitting | SVM C swept 0.0001–10,000 (×1,000 iter) — training hit 100% at C ≥ 100, test plateaued at ~96.5% |
+| Feature importance | RF top-3 (worst perimeter, mean concave points, worst concave points) match known cytological markers |
+| Interpretability | LR/RF expose weights and importances; MLP does not — limits clinical and regulatory accountability |
 
 ## Tech
 
